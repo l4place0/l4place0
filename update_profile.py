@@ -197,7 +197,6 @@ def info_lines(s):
         [],
         kv("Languages.Code", "Python, JavaScript, TypeScript, C/C++"),
         kv("Languages.Real", "Chinese, English"),
-        kv("AI", "DeepSleep, Claude, GPT"),
         [],
         rule("Contact"),
         kv("Blog", "https://your-blog.example.com"),
