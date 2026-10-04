@@ -16,8 +16,11 @@ JOINED_DATE = date(2024, 5, 7)
 JOINED_YEAR = 2024
 W = 56  # info column width in monospace units
 
-# DeepSeek Whale Logo ASCII Art
+# DeepSleep Whale Logo ASCII Art (sleeping deepseek with zzz...)
 ART = r"""
+                      z Z
+                    z
+                  .
                   --      -
         ==++++++++=-     -==
      =++*****###**+      =+++=      --
@@ -41,7 +44,7 @@ ART = r"""
         =++*******++==
            ++***+++
 
-         d e e p s e e k
+       d e e p s l e e p   z z z . . .
 """
 
 def get_token():
@@ -194,7 +197,7 @@ def info_lines(s):
         [],
         kv("Languages.Code", "Python, JavaScript, TypeScript, C/C++"),
         kv("Languages.Real", "Chinese, English"),
-        kv("AI", "DeepSeek-V3, Claude, GPT"),
+        kv("AI", "DeepSleep, Claude, GPT"),
         [],
         rule("Contact"),
         kv("Blog", "https://your-blog.example.com"),
@@ -216,7 +219,7 @@ def render(mode, stats):
         f'<rect x="0.5" y="0.5" width="839" height="499" rx="10" fill="{p["bg"]}" stroke="{p["border"]}"/>',
     ]
     for i, line in enumerate(ART.strip("\n").split("\n")):
-        out.append(f'<text x="25" y="{55 + i * 15}" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
+        out.append(f'<text x="25" y="{42 + i * 15}" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
     for i, segs in enumerate(info_lines(stats)):
         if not segs:
             continue
